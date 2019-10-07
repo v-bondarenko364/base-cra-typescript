@@ -1,0 +1,52 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"extends": ["airbnb", "prettier", "prettier/react", "plugin:@typescript-eslint/recommended"],
+	"plugins": ["prettier"],
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".ts", ".tsx"]
+			}
+		],
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"react/prop-types": 0,
+		"no-underscore-dangle": 0,
+		"no-alert": 1,
+		"require-await": 1,
+		"dot-location": 1,
+		"dot-notation": 1,
+		"no-self-assign": 2,
+		"no-useless-concat": 2,
+		"no-useless-escape": 2,
+		"eqeqeq": 2,
+		"import/imports-first": ["error", "absolute-first"],
+		"import/prefer-default-export": "off",
+		"import/newline-after-import": "error"
+	},
+	// TODO: add globals custom for react, and maybe remove window and document because we don't need it.
+	// TODO: move to custom directory tests (it's permanent) and make custom rules for testing
+	"globals": {
+		"window": true,
+		"document": true,
+		"localStorage": true,
+		"FormData": true,
+		"FileReader": true,
+		"Blob": true,
+		"navigator": true
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".ts", ".tsx"]
+			}
+		}
+	}
+}

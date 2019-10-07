@@ -1,36 +1,70 @@
 {
-  "name": "tsreact",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@types/jest": "24.0.18",
-    "@types/node": "12.7.11",
-    "@types/react": "16.9.5",
-    "@types/react-dom": "16.9.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
-    "typescript": "3.6.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "tsreact",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@types/node": "12.7.11",
+		"@types/redux-saga": "^0.10.5",
+		"axios": "^0.19.0",
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2",
+		"react-redux": "^7.1.1",
+		"react-scripts": "3.2.0",
+		"redux": "^4.0.4",
+		"redux-saga": "^1.1.1",
+		"typesafe-actions": "^4.4.2",
+		"typescript": "3.6.3"
+	},
+	"scripts": {
+		"web:start:dev": "react-scripts start",
+		"web:start:build": "react-scripts build",
+		"prettier": "prettier typescript --write 'src/**/*.{ts, tsx}'",
+		"lint": "yarn eslint src/**/*.{ts,tsx}",
+		"lint:commit": "commitlint --from=HEAD~1",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"lint-staged": {
+		"*.{js, ts, css}": [
+			"pretty-quick --staged",
+			"eslint src/**/*.{ts,tsx} --fix",
+			"git add"
+		],
+		"yarn.lock": [
+			"git rm --cached"
+		]
+	},
+	"eslintIgnore": [
+		"src/serviceWorker.ts",
+		"src/tests"
+	],
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@commitlint/config-conventional": "^8.2.0",
+		"@types/jest": "^24.0.18",
+		"@types/react": "^16.9.5",
+		"@types/react-dom": "^16.9.1",
+		"@types/react-redux": "^7.1.4",
+		"@typescript-eslint/eslint-plugin": "^2.3.3",
+		"@typescript-eslint/parser": "^2.3.2",
+		"commitlint": "^8.2.0",
+		"eslint-config-airbnb": "^18.0.1",
+		"eslint-config-prettier": "^6.4.0",
+		"eslint-plugin-prettier": "^3.1.1",
+		"husky": "^3.0.8",
+		"lint-staged": "^9.4.2",
+		"prettier": "^1.18.2",
+		"pretty-quick": "^1.11.1"
+	}
 }
