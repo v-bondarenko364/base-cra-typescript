@@ -35,3 +35,34 @@ Lint last commit `src` folder.<br />
 - gitlens
 - stylelint
 - vscode icons
+
+### Add to VS Code settings following:
+
+```
+	"eslint.autoFixOnSave": true,
+	"eslint.validate": [
+	"javascript",
+	"javascriptreact",
+	{
+	"language": "typescript",
+	"autoFix": true
+	},
+	{
+	"language": "typescriptreact",
+	"autoFix": true
+	}
+	],
+	"editor.formatOnSave": true,
+	"[javascript]": {
+	"editor.formatOnSave": false,
+	},
+	"[javascriptreact]": {
+	"editor.formatOnSave": false,
+	},
+	"[typescript]": {
+	"editor.formatOnSave": false,
+	},
+	"[typescriptreact]": {
+	"editor.formatOnSave": false,
+	},
+```
