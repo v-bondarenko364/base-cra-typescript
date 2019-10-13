@@ -27,3 +27,11 @@ Lints all files `src` folder.<br />
 ### `yarn lint:commit`
 
 Lint last commit `src` folder.<br />
+
+### VS Code packages to install:
+
+- editorconfig for vs code
+- eslint
+- gitlens
+- stylelint
+- vscode icons
