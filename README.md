@@ -1,3 +1,7 @@
+**Before staring:**
+You should create .env file in root directory
+And put following content `BROWSER=none`
+
 ### `yarn web:start:dev`
 
 Runs the app in the development mode.<br />
