@@ -1,7 +1,9 @@
+import * as RepositoriesActions from 'store/ducks/repositories/actions';
+
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import styled from 'styled-components';
 
-import * as RepositoriesActions from 'store/ducks/repositories/actions';
 import { ApplicationState } from 'store';
 
 
@@ -17,16 +19,22 @@ const RepositoryList = () => {
 
 	return (
 		<>
-			<ul>
+			<List>
 				{repositories.map(repository => (
 					<RepositoryItem key={repository.id} repository={repository} />
 				))}
-			</ul>
+			</List>
 			<button onClick={loadRepositories} type="button">
 				Load repo
 			</button>
 		</>
 	);
 };
+
+const List = styled.ul`
+	list-style: none;
+	color: green;
+`;
+
 
 export default RepositoryList;
