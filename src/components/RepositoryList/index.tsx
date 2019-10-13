@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { ApplicationState } from '../../store';
+import * as RepositoriesActions from 'store/ducks/repositories/actions';
+import { ApplicationState } from 'store';
 
-import * as RepositoriesActions from '../../store/ducks/repositories/actions';
 
 import RepositoryItem from '../RepositoryItem';
 

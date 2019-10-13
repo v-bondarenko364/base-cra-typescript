@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Repository } from '../../store/ducks/repositories/types';
+import { Repository } from 'types/redux';
 
 interface RepositoryItemProps {
 	repository: Repository;

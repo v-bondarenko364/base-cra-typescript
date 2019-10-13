@@ -16,23 +16,22 @@
 				"extensions": [".ts", ".tsx"]
 			}
 		],
+		"import/no-unresolved": "off",
 		"@typescript-eslint/explicit-function-return-type": "off",
-		"react/prop-types": 0,
-		"no-underscore-dangle": 0,
-		"no-alert": 1,
-		"require-await": 1,
-		"dot-location": 1,
-		"dot-notation": 1,
-		"no-self-assign": 2,
-		"no-useless-concat": 2,
-		"no-useless-escape": 2,
-		"eqeqeq": 2,
+		"react/prop-types": "off",
+		"no-underscore-dangle": "off",
+		"no-alert": "warn",
+		"require-await": "warn",
+		"dot-location": "warn",
+		"dot-notation": "warn",
+		"no-self-assign": "error",
+		"no-useless-concat": "error",
+		"no-useless-escape": "error",
+		"eqeqeq": "error",
 		"import/imports-first": ["error", "absolute-first"],
 		"import/prefer-default-export": "off",
 		"import/newline-after-import": "error"
 	},
-	// TODO: add globals custom for react, and maybe remove window and document because we don't need it.
-	// TODO: move to custom directory tests (it's permanent) and make custom rules for testing
 	"globals": {
 		"window": true,
 		"document": true,
