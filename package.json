@@ -16,7 +16,7 @@
 	},
 	"scripts": {
 		"web:start:dev": "react-scripts start",
-		"web:start:build": "react-scripts build",
+		"web:build": "react-scripts build",
 		"prettier": "prettier typescript --write 'src/**/*.{ts, tsx}'",
 		"lint": "yarn eslint src/**/*.{ts,tsx}",
 		"lint:commit": "commitlint --from=HEAD~1",
