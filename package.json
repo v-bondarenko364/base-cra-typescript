@@ -1,7 +1,19 @@
 {
-	"name": "tsreact",
+	"name": "cra-boilerplate",
 	"version": "0.1.0",
 	"private": true,
+	"scripts": {
+		"web:start:dev": "react-scripts start",
+		"web:build": "react-scripts build",
+		"prettier": "prettier typescript --write 'src/**/*.{ts, tsx}'",
+		"lint": "yarn lint:js && yarn lint:css && yarn lint:types",
+		"lint:js": "eslint src/**/*.{ts,tsx}",
+		"lint:css": "stylelint './src/**/*.tsx'",
+		"lint:types": "tsc",
+		"lint:last-commit": "commitlint --from=HEAD~1",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
 	"dependencies": {
 		"@material-ui/core": "^4.5.1",
 		"@material-ui/icons": "^4.5.1",
@@ -15,20 +27,9 @@
 		"redux": "^4.0.4",
 		"redux-saga": "^1.1.1",
 		"styled-components": "^4.4.0",
+		"styled-components-breakpoint": "^3.0.0-preview.20",
 		"typesafe-actions": "^4.4.2",
 		"typescript": "3.6.4"
-	},
-	"scripts": {
-		"web:start:dev": "react-scripts start",
-		"web:build": "react-scripts build",
-		"prettier": "prettier typescript --write 'src/**/*.{ts, tsx}'",
-		"lint": "yarn lint:js && yarn lint:css && yarn lint:types",
-		"lint:js": "eslint src/**/*.{ts,tsx}",
-		"lint:css": "stylelint './src/**/*.tsx'",
-		"lint:types": "tsc",
-		"lint:last-commit": "commitlint --from=HEAD~1",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
 	},
 	"lint-staged": {
 		"*.{js, ts, css}": [
@@ -70,7 +71,7 @@
 		"eslint-plugin-prettier": "^3.1.1",
 		"husky": "^3.0.8",
 		"lint-staged": "^9.4.2",
-		"prettier": "^1.18.2",
+		"prettier": "^1.19.1",
 		"pretty-quick": "^2.0.0",
 		"styled-reset": "^4.0.7",
 		"stylelint": "^11.1.1",
