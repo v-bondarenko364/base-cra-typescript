@@ -1,0 +1,10 @@
+{
+	"*.{js, ts, css}": [
+			"pretty-quick --staged",
+			"yarn lint",
+			"git add"
+		],
+	"yarn.lock": [
+		"git rm --cached"
+	]
+}

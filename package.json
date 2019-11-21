@@ -31,16 +31,6 @@
 		"typesafe-actions": "^4.4.2",
 		"typescript": "3.6.4"
 	},
-	"lint-staged": {
-		"*.{js, ts, css}": [
-			"pretty-quick --staged",
-			"yarn lint",
-			"git add"
-		],
-		"yarn.lock": [
-			"git rm --cached"
-		]
-	},
 	"eslintIgnore": [
 		"src/serviceWorker.ts",
 		"src/tests"
