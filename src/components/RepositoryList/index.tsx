@@ -33,7 +33,7 @@ const RepositoryList = () => {
 
 const List = styled.ul`
 	list-style: none;
-	color: green;
+	color: ${({theme}) => theme.colors.black};
 `;
 
 

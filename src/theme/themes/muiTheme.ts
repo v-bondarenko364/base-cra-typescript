@@ -1,15 +1,12 @@
-const basicMuiTheme = {
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const muiTheme = createMuiTheme({
   typography: {
-    fontFamily: '',
-	},
-	// TODO: change theme
+    fontFamily: 'Nexa, Montserrat, Helvetica, Arial, sans-serif',
+  },
   palette: {
     primary: { main: '#000' },
-    secondary: {
-      main: '#00B3C0',
-      contrastText: '#FFF',
-    },
-  },
-};
+	}
+});
 
-export default basicMuiTheme;
+export default muiTheme;

@@ -1,6 +1,6 @@
 export default {
-	black: '#fafafa',
-	white: '#333',
+	main: '#fafafa',
+	text: '#333',
 };
 
 

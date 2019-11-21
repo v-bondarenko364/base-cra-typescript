@@ -1,17 +1,17 @@
-import { createGlobalStyle } from 'styled-components';
-// import reset from 'styled-reset';
+import { createGlobalStyle, DefaultTheme } from 'styled-components';
+import reset from 'styled-reset';
 
-// import breakpoints from '../patterns/breakpoints';
-// import colors from '../patterns/colors';
-// import fonts from '../patterns/fonts';
+import muiTheme from './muiTheme';
+import breakpoints from '../patterns/breakpoints';
+import colors from '../patterns/colors';
 
+
+// TODO: add basic loading for custom font when finish adding custom paths
 // import NexaRegular from '../../static/fonts/NexaRegular.otf';
 // import NexaBold from '../../static/fonts/NexaRegular.otf';
 // import NexaXBold from '../../static/fonts/NexaRegular.otf';
 
-export const GlobalStyle = createGlobalStyle`
-  /* ${reset}
-
+/*
   @font-face {
     src: ${NexaRegular};
     font-family: 'Nexa';
@@ -29,6 +29,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Nexa';
     font-weight: 900;
   } */
+export const GlobalStyle = createGlobalStyle`
+	${reset}
 
   body {
     font-family: 'Nexa', sans-serif;
@@ -44,8 +46,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const basicTheme = {
+
+export const theme: DefaultTheme = {
   breakpoints,
-  colors,
-  fonts,
+	colors,
+	muiTheme,
 };
