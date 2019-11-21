@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 import { ApplicationState } from 'store';
 
-
 import RepositoryItem from '../RepositoryItem';
 
 const RepositoryList = () => {
@@ -33,8 +32,7 @@ const RepositoryList = () => {
 
 const List = styled.ul`
 	list-style: none;
-	color: ${({theme}) => theme.colors.black};
+	color: ${({ theme }) => theme.colors.black};
 `;
-
 
 export default RepositoryList;

@@ -1,7 +1,8 @@
 {
-	"*.{js, ts, css}": [
+	"src/**/*.{js,ts,tsx}": [
 			"pretty-quick --staged",
-			"yarn lint",
+			"eslint --fix",
+			"prettier --write",
 			"git add"
 		],
 	"yarn.lock": [
