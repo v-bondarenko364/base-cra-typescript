@@ -1,10 +1,11 @@
-import * as RepositoriesActions from 'store/ducks/repositories/actions';
+import * as RepositoriesActions from '@store/ducks/repositories/actions';
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
-import { ApplicationState } from 'store';
+import { Repository } from '@store/types';
+import { ApplicationState } from '@store/index';
 
 import RepositoryItem from '../RepositoryItem';
 
@@ -19,7 +20,7 @@ const RepositoryList = () => {
 	return (
 		<>
 			<List>
-				{repositories.map(repository => (
+				{repositories.map((repository: Repository) => (
 					<RepositoryItem key={repository.id} repository={repository} />
 				))}
 			</List>

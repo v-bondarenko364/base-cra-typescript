@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Repository } from 'types/redux';
+import { Repository } from '@store/types';
 
 interface RepositoryItemProps {
 	repository: Repository;

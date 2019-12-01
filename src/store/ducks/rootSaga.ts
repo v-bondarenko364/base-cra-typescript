@@ -1,6 +1,6 @@
 import { all, takeLatest } from 'redux-saga/effects';
 
-import { RepositoriesTypes } from 'types/redux';
+import { RepositoriesTypes } from '@store/types';
 import { load } from './repositories/sagas';
 
 export default function* rootSaga() {

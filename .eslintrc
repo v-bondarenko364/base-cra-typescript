@@ -30,7 +30,8 @@
 		"eqeqeq": "error",
 		"import/imports-first": ["error", "absolute-first"],
 		"import/prefer-default-export": "off",
-		"import/newline-after-import": "error"
+		"import/newline-after-import": "error",
+		"consistent-return": "off"
 	},
 	"globals": {
 		"window": true,
@@ -43,7 +44,14 @@
 	},
 	"settings": {
 		"import/resolver": {
-			"node": {
+			"alias": {
+				"map": [
+				 ["@modules", "src/modules"],
+				 ["@services", "src/services"],
+				 ["@static", "src/static"],
+				 ["@store", "src/store"],
+				 ["@theme", "src/theme"]
+				],
 				"extensions": [".ts", ".tsx"]
 			}
 		}

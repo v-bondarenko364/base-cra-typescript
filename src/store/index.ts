@@ -1,9 +1,9 @@
 import { applyMiddleware, createStore, Store } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { RepositoriesState } from 'types/redux';
 
 import rootReducer from './ducks/rootReducer';
 import rootSaga from './ducks/rootSaga';
+import { RepositoriesState } from './types';
 
 export interface ApplicationState {
 	repositories: RepositoriesState;

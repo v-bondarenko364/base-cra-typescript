@@ -1,5 +1,5 @@
 import { action } from 'typesafe-actions';
-import { RepositoriesTypes, Repository } from 'types/redux';
+import { RepositoriesTypes, Repository } from '@store/types';
 
 export const loadRequest = () => action(RepositoriesTypes.LOAD_REQUEST);
 
