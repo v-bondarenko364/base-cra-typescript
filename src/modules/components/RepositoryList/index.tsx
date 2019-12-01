@@ -6,10 +6,15 @@ import styled from 'styled-components';
 
 import { Repository } from '@store/types';
 import { ApplicationState } from '@store/index';
+import { I18nModel } from '@services/i18n';
 
 import RepositoryItem from '../RepositoryItem';
 
-const RepositoryList = () => {
+interface RepositoryListProps {
+	i18n: I18nModel;
+}
+
+const RepositoryList = ({ i18n }: RepositoryListProps) => {
 	const repositories = useSelector((state: ApplicationState) => state.repositories.data);
 	const dispatch = useDispatch();
 
@@ -25,7 +30,7 @@ const RepositoryList = () => {
 				))}
 			</List>
 			<button onClick={loadRepositories} type="button">
-				Load repo
+				{i18n.t.test}
 			</button>
 		</>
 	);

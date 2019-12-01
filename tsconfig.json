@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": "./",
 		"paths": {
+			"@lang/*": ["src/lang/*"],
 			"@modules/*": ["src/modules/*"],
 			"@services/*": ["src/services/*"],
 			"@static/*": ["src/static/*"],

@@ -294,6 +294,7 @@ module.exports = webpackEnv => {
 					'scheduler/tracing': 'scheduler/tracing-profiling',
 				}),
 				...(modules.webpackAliases || {}),
+				'@lang': path.resolve('src/lang'),
 				'@modules': path.resolve('src/modules'),
 				'@services': path.resolve('src/services'),
 				'@static': path.resolve('src/static'),
