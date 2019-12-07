@@ -31,7 +31,8 @@
 		"import/imports-first": ["error", "absolute-first"],
 		"import/prefer-default-export": "off",
 		"import/newline-after-import": "error",
-		"consistent-return": "off"
+		"consistent-return": "off",
+		"react/jsx-props-no-spreading": "off"
 	},
 	"globals": {
 		"window": true,

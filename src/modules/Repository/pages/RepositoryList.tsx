@@ -2,13 +2,14 @@ import * as RepositoriesActions from '@store/ducks/repositories/actions';
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Repository } from '@store/types';
 import { ApplicationState } from '@store/index';
 import { I18nModel } from '@services/i18n';
 
-import RepositoryItem from '../RepositoryItem';
+import RepositoryItem from '../components/RepositoryItem';
 
 interface RepositoryListProps {
 	i18n: I18nModel;
@@ -30,8 +31,10 @@ const RepositoryList = ({ i18n }: RepositoryListProps) => {
 				))}
 			</List>
 			<button onClick={loadRepositories} type="button">
-				{i18n.t.test}
+				{i18n.t.greeting('test')}
 			</button>
+
+			<Link to="/">To home page</Link>
 		</>
 	);
 };
