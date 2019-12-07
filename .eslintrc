@@ -8,7 +8,7 @@
 		"ecmaFeatures": {
 			"jsx": true
 		}
-	},
+	},tyr
 	"rules": {
 		"react/jsx-filename-extension": [
 			1,
