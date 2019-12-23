@@ -6,6 +6,9 @@ interface HomeProps {
 	i18n: I18nModel;
 }
 const Home = ({ i18n }: HomeProps) => {
+	setTimeout(() => {
+		throw new Error('Test');
+	}, 1000);
 	return (
 		<div>
 			<p>Home page</p>

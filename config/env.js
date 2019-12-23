@@ -19,6 +19,8 @@ const dotenvFiles = [
 	// results for everyone
 	NODE_ENV !== 'test' && `${paths.dotenv}.local`,
 	paths.dotenv,
+	// TODO: add env plugin
+	// path.resolve('../.env'),
 ].filter(Boolean);
 
 // Load environment variables from .env* files. Suppress warnings using silent
