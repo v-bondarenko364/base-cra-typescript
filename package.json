@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"lint:styles": "stylelint '**/*.css'"
+		"lint:styles": "stylelint '**/*.css'",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"next": "^15.2.4",
@@ -15,15 +16,19 @@
 		"react-dom": "^19.0.0"
 	},
 	"devDependencies": {
+		"@commitlint/config-conventional": "^19.8.0",
 		"@eslint/eslintrc": "^3",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"commitlint": "^19.8.0",
 		"eslint": "^9",
 		"eslint-config-next": "15.2.4",
 		"husky": "^9.1.7",
+		"lint-staged": "^15.5.0",
 		"postcss-styled-syntax": "^0.7.1",
+		"prettier": "^3.5.3",
 		"stylelint": "^16.18.0",
 		"stylelint-config-standard": "^38.0.0",
 		"tailwindcss": "^4",
